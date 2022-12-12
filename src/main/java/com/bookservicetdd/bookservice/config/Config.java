@@ -1,11 +1,10 @@
-package com.bookservicetdd.bookservice;
+package com.bookservicetdd.bookservice.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-//@Profile("development")
 public class Config implements WebMvcConfigurer {
 
     @Override

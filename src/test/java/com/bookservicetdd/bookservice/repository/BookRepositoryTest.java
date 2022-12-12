@@ -1,4 +1,4 @@
-package com.bookservicetdd.bookservice;
+package com.bookservicetdd.bookservice.repository;
 
 
 import com.bookservicetdd.bookservice.model.Book;

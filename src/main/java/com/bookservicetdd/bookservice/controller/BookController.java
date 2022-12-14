@@ -32,12 +32,15 @@ public class BookController {
     }
 
     @DeleteMapping("/{id}")
-    ResponseEntity deleteBookById(@PathVariable Long id) {
+    ResponseEntity deleteBookById(@PathVariable Long id) throws Exception {
+        bookService.deleteBookById(id);
+        System.out.println("inside book service controller");
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping
     ResponseEntity<Book> updateBookById(@RequestBody Book book) throws Exception {
+
         return new ResponseEntity<>(bookService.updateBookById(book), HttpStatus.OK);
     }
 }

@@ -31,7 +31,11 @@ public class BookService {
         return book.get();
     }
 
-    public void deleteBookById(long id) {
+    public void deleteBookById(long id) throws Exception {
+        Optional<Book> book = bookRepository.findById(id);
+        if (!book.isPresent()) {
+            throw new Exception();
+        }
         bookRepository.deleteById(id);
     }
 
